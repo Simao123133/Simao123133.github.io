@@ -1,0 +1,21 @@
+<form class="contact-form example-container" (submit)="sendEmail($event)" [formGroup]="formData">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" formControlName="user_name" required name = "user_name">
+        <mat-error *ngIf="formData.invalid">You must enter a name</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput placeholder="pat@example.com" type="email" formControlName="user_email" required name = "user_email">
+        <mat-error *ngIf="formData.invalid">
+            <div *ngIf="formData.touched; else elseBlock">Invalid email</div>
+            <ng-template #elseBlock>You must enter an email</ng-template>
+        </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Body</mat-label>
+        <textarea matInput name="message" formControlName="message" required></textarea>
+        <mat-error *ngIf="formData.invalid">You must enter a body</mat-error>
+    </mat-form-field>
+    <button mat-raised-button type="submit" value="Send">Send</button>
+</form>

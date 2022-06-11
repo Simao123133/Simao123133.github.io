@@ -1,0 +1,35 @@
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+    <span>Simão Amaro</span>
+    <span fxFlex></span>
+    <button [routerLink]="['home']" mat-raised-button fxHide.lt-md>Home</button>
+    <button [routerLink]="['my-work']" mat-raised-button fxHide.lt-md>My Work</button>
+    <button [routerLink]="['about-me']" mat-raised-button fxHide.lt-md>About me</button>
+    <button [routerLink]="['resume']" mat-raised-button fxHide.lt-md>Resume</button>
+    <button [routerLink]="['contact']" mat-raised-button fxHide.lt-md>Contact</button>
+    <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.lt-md>
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #dropMenu="matMenu">
+        <button [routerLink]="['home']" mat-menu-item>Home</button>
+        <mat-divider></mat-divider>
+        <button [routerLink]="['my-work']" mat-menu-item>My Work</button>
+        <mat-divider></mat-divider>
+        <button [routerLink]="['about-me']" mat-menu-item>About me</button>
+        <mat-divider></mat-divider>
+        <button [routerLink]="['resume']" mat-menu-item>Resume</button>
+        <mat-divider></mat-divider>
+        <button [routerLink]="['contact']" mat-menu-item>Contact</button>
+    </mat-menu>
+    <button mat-icon-button (click)="goToLinkedin()">
+        <mat-icon svgIcon="linkedin" class ="icon-display"></mat-icon>
+    </button>
+    <button mat-icon-button (click)="goToGithub()">
+        <mat-icon svgIcon="github" class ="icon-display"></mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="Total: {{numberOfLikes}}!"  matTooltipClass="example-tooltip-red">
+    <mat-icon [@openClose]=state class="open-close-container" (click)="toggle()" (@openClose.done)="animEnd($event)">favorite</mat-icon>
+    </button>
+</mat-toolbar>
+
+
+
