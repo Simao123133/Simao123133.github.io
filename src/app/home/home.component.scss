@@ -2,8 +2,9 @@
     background-image:url("../../assets/Coding2.png");
     background-position:center;
     background-size: cover;
-    height:80vh;
-    width:100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    max-width:100%
 }
 
 .bigtext{
