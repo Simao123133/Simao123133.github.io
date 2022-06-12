@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   }
   ngAfterViewInit() {
     //this.elementRef.nativeElement.ownerDocument
-    //  .body.style.backgroundImage ="url('../assets/Coding.webp')"; 
+    //  .body.style.backgroundImage ="url('assets/Coding2.webp')"; 
     this.elementRef.nativeElement.ownerDocument
       .body.style.backgroundSize = "cover"; 
   }
