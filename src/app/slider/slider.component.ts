@@ -45,7 +45,7 @@ export class SliderComponent implements OnInit {
       if (val instanceof NavigationStart){
         this.value = this.pathsToValues.get(val.url) || 0;
         if (val.url === "/home"){
-          this.home = true;
+          this.home = false;
         }else{
           this.home = false;
         }
