@@ -7,8 +7,6 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
-  pdfSource =  "CV";
-
   constructor(private elementRef:ElementRef) { }
 
   ngOnInit(): void {

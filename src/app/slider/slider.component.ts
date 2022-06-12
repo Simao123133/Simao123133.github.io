@@ -9,6 +9,8 @@ import { NavigationStart } from '@angular/router';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
+
+  show: boolean = true;
   value: number = 1;
   options: Options = {
     showTicksValues: true,
@@ -24,6 +26,7 @@ export class SliderComponent implements OnInit {
 
   valuesToPaths = new Map<number, string>();
   pathsToValues = new Map<string, number>();
+  home: boolean = true;
   
 
   ngOnInit(): void {
@@ -41,6 +44,11 @@ export class SliderComponent implements OnInit {
     this.route.events.subscribe(val => {
       if (val instanceof NavigationStart){
         this.value = this.pathsToValues.get(val.url) || 0;
+        if (val.url === "/home"){
+          this.home = true;
+        }else{
+          this.home = false;
+        }
      }
     });
       
@@ -48,6 +56,14 @@ export class SliderComponent implements OnInit {
 
   onUserChange(changeContext: ChangeContext): void {
     this.route.navigate([this.valuesToPaths.get(changeContext.value) || '']); // navigate to other page
+  }
+
+  clearOpacity(){
+    this.show = true;
+  }
+
+  blurredOpacity(){
+    this.show = false;
   }
 
 

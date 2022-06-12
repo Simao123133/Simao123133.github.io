@@ -1,2 +1,140 @@
-<em class = "mat-display-4 center">My Work</em>
+<div class="content">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="25%" fxFlex.xs ="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4" >
+          <mat-card-header>
+            <mat-card-title>Recipes Website</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="./../assets/receitas.png">
+          <mat-card-content>
+            <p>
+                This website displays recipes, their nutritional information based on 
+                the inserted calories and nutrients per ingredient, has an authentication
+                system and allows to leave messages to me. I used Django for the backend, 
+                with integration of SQLite3 to create the models. 
+                The frontend was made with Django Forms and Bootstrap. To host the
+                website I used Heroku and to store files, Cloudinary. 
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="goTo('https://recipessimao.herokuapp.com/')">Go to Website</button>
+            <button mat-raised-button color="primary" (click)="goTo('https://github.com/Simao123133/receitas')">View code on github</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
+    <div fxFlex="25%" fxFlex.xs ="100%" fxFlex.sm="33%">
+      <mat-card class="mat-elevation-z4" >
+          <mat-card-header>
+            <mat-card-title>Solar Boat Data Analysis</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="./../assets/TSBData.png">
+          <mat-card-content>
+            <p>
+                This is an app to view on or offline data incoming from a boat. The messages are received
+                by MQTT and are displayed in customizable graphs using PyQt5 and PyQtGraph. It also allows 
+                calculations between signals.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" (click)="goTo('https://www.youtube.com/watch?v=L2khShk1lFA&ab_channel=simaoamaro')">View On Youtube</button>
+            <button mat-raised-button color="primary" (click)="goTo('https://github.com/Simao123133/TSBData')">View code on github</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div fxFlex="25%" fxFlex.xs ="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4" >
+            <mat-card-header>
+              <mat-card-title>Hydrofoil Control</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="./../assets/Alqueva.jpg">
+            <mat-card-content>
+              <p>
+                  This project is about the control of the hydrofoils of a solar powered boat. A lot of control, filtering and 
+                  digital processing algorithms where developed to achieve stable flight. The code is written in MATLAB and Python
+                  and then translated to C++ in a Teensy 4.0.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="goTo('https://youtu.be/mS_FiUb2w_U?t=52')">View On Youtube</button>
+              <button mat-raised-button color="primary" (click)="goTo('https://github.com/Simao123133/TSBSimulation')">View code on github</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+      <div fxFlex="25%" fxFlex.xs ="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4" >
+            <mat-card-header>
+              <mat-card-title>Bayesian Network Classifier</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="./../assets/JavaClassifier.png">
+            <mat-card-content>
+              <p>
+                  This is a dataset classifier based on a Bayesian Network. Written in Java and has a small UI to 
+                  enter datasets and view results.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="goTo('https://github.com/Simao123133/bubbleshooter')">View code on github</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+        <div fxFlex="25%" fxFlex.xs ="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4" >
+            <mat-card-header>
+              <mat-card-title>Client Server Database ATM architecture</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="./../assets/csd.png">
+            <mat-card-content>
+              <p>
+                  This is a client server database architecture simulating a working ATM. 
+                  The ATM must communicate with the database to give access to the
+                  client and let them perform several operations. Was written in C and used stream and datagram
+                  sockets to communicate between the components. To avoid race conditions, mutexes were inserted 
+                  on simultaneous write or delete actions. In addition, several threads were used to facilitate 
+                  conversation and operations on the systems.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="goTo('https://github.com/Simao123133/ATM')">View code on github</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+      <div fxFlex="25%" fxFlex.xs ="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4" >
+            <mat-card-header>
+              <mat-card-title>Boat Identifier</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="./../assets/BoatIdentifier.png">
+            <mat-card-content>
+              <p>
+                  This code uses neural networks - feedforward and recurrent - to identify a model of a boat. Written in MATLAB
+                  and uses the deep learning toolbox and also a fuzzy toolbox.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="goTo('https://github.com/Simao123133/BoatIdentifcation/blob/master/Report.pdf')">View report</button>
+              <button mat-raised-button color="primary" (click)="goTo('https://github.com/Simao123133/BoatIdentifcation')">View code on github</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+      <div fxFlex="25%" fxFlex.xs ="100%" fxFlex.sm="33%">
+        <mat-card class="mat-elevation-z4" >
+            <mat-card-header>
+              <mat-card-title>Bubble Crush</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="./../assets/bubbleshooter.png">
+            <mat-card-content>
+              <p>
+                  This is a candy-crush like game with bubbles, whose goal is to combine 4 or more in rows or columns
+                  to eliminate all bubbles. The game was developed in C and was an introductory project to programming.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-raised-button color="primary" (click)="goTo('https://github.com/Simao123133/bubbleshooter')">View code on github</button>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+          
+    </div>
+    </div>
+    
 

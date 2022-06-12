@@ -1,0 +1,17 @@
+.content {
+    padding: 16px;
+    margin-bottom: 10px;
+}
+
+.content > mat-card {
+    width: 200px;
+    max-height: 50px!important;
+}
+
+.box{
+    display: none;
+    width: 100%;
+}
+
+
+

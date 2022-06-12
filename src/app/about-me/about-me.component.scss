@@ -1,0 +1,54 @@
+img {
+    border-radius: 50%;
+    width: 60%;
+    margin-left: 10%;
+  }
+.column1 {
+    float: left;
+    width: 28%;
+    }
+.column3 {
+    float: left;
+    width: 33.33%;
+  }
+.title{
+    text-align:center;
+}
+.column2 {
+float: left;
+width: 50%;
+}
+.child{
+    margin-top: 8%;
+}
+  
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 3vw;
+}
+
+.row2:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.main-container{
+    margin:5vw;
+}
+
+h1 {
+    font-size: 1.5vw;
+}
+  
+h2 {
+    font-size: 1.2vw;
+}
+
+h3 {
+    font-size: 1vw;
+}
+  

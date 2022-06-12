@@ -1,7 +1,9 @@
-<app-top-bar class = "bottom30"></app-top-bar> 
+<header><app-top-bar></app-top-bar></header>
+<main class="Site-content">
 <div [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet"></router-outlet>
+<router-outlet #outlet="outlet"></router-outlet>
 </div>
-<app-slider></app-slider>
-<app-bottom-bar ></app-bottom-bar>
+</main>
+<footer><app-slider></app-slider><app-bottom-bar ></app-bottom-bar></footer>
+
 

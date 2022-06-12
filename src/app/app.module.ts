@@ -27,6 +27,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import  {  PdfViewerModule  }  from  'ng2-pdf-viewer';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule} from '@angular/material/card';
+import { LightboxModule } from 'ngx-lightbox';
+import { AvatarModule } from 'ngx-avatar';
 
 @NgModule({
   declarations: [
@@ -58,7 +61,10 @@ import { FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     MatSnackBarModule,
     PdfViewerModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    LightboxModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
