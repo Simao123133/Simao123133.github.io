@@ -64,7 +64,7 @@ import { AvatarModule } from 'ngx-avatar';
     FormsModule,
     MatCardModule,
     LightboxModule,
-    AvatarModule
+    AvatarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

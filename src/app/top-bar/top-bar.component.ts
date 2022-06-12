@@ -40,6 +40,7 @@ import {
 })
 export class TopBarComponent implements OnInit {
 
+
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
     this.matIconRegistry.addSvgIcon(
       "github",

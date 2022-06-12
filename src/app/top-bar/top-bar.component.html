@@ -26,9 +26,10 @@
     <button mat-icon-button (click)="goToGithub()">
         <mat-icon svgIcon="github" class ="icon-display"></mat-icon>
     </button>
-    <button mat-icon-button matTooltip="Total: {{numberOfLikes}}!"  matTooltipClass="example-tooltip-red">
+    <button mat-icon-button>
     <mat-icon [@openClose]=state class="open-close-container" (click)="toggle()" (@openClose.done)="animEnd($event)">favorite</mat-icon>
     </button>
+
 </mat-toolbar>
 
 
