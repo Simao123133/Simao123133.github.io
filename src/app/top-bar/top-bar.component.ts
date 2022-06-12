@@ -43,10 +43,10 @@ export class TopBarComponent implements OnInit {
   constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
     this.matIconRegistry.addSvgIcon(
       "github",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/github.svg"));
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/github.svg"));
     this.matIconRegistry.addSvgIcon(
       "linkedin",
-      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/linkedin.svg"));
+      this.domSanitizer.bypassSecurityTrustResourceUrl("assets/linkedin.svg"));
     
   }
 
