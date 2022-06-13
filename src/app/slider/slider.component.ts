@@ -14,6 +14,7 @@ export class SliderComponent implements OnInit {
   show: boolean = true;
   value: number = 1;
   options: any;
+  desktop: any;
   constructor(private route:Router, private deviceService: DeviceDetectorService) {}
 
   valuesToPaths = new Map<number, string>();
@@ -42,8 +43,9 @@ export class SliderComponent implements OnInit {
         }
      }
     });
+    this.desktop = this.deviceService.isDesktop();
     this.options = {
-      showTicksValues: this.deviceService.isDesktop(),
+      showTicksValues: true,
       stepsArray: [
         { value: 1, legend: "Home" },
         { value: 2, legend: "My Work"},
