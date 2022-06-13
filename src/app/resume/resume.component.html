@@ -1,1 +1,3 @@
-<img src="assets/CV1.png" class = "cv_png">
+<div *ngIf="desktop; else elseBlock"><img src="assets/CV1.png" class = "cv_png"></div>
+<ng-template #elseBlock><img src="assets/CVMobile.png" class = "cv_png"></ng-template>
+
