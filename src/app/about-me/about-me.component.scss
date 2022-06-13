@@ -4,14 +4,12 @@
   }
 .title{
     text-align:center;
-}
-
-.child{
-    margin-top: 8vh;
+    margin-bottom: 5vh;
 }
 
 .second-container{
-    margin:5vh;
+    margin-top:5vh;
+    margin-bottom:1vh;
     display:inline-block
 }
   
@@ -27,10 +25,6 @@
     content: "";
     display: table;
     clear: both;
-}
-
-.main-container{
-    margin:5vh;
 }
 
 h1 {
