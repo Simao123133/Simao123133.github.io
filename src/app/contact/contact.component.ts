@@ -40,6 +40,7 @@ export class ContactComponent implements OnInit {
       duration: 3000,
       verticalPosition: 'top',
       horizontalPosition: 'center',
+      panelClass: ['snackbar-config']
     });
 
     formDirective.resetForm();
