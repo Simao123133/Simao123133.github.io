@@ -33,6 +33,7 @@
     "kvdb.io": "^1.0.5",
     "ng2-pdf-viewer": "^9.0.0",
     "ngx-avatar": "^4.1.0",
+    "ngx-device-detector": "^3.0.0",
     "ngx-lightbox": "^2.6.1",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

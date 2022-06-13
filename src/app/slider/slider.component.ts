@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Options, ChangeContext, PointerType} from "@angular-slider/ngx-slider";
 import {Router} from '@angular/router'; // import router from angular router
 import { NavigationStart } from '@angular/router';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-slider',
@@ -12,22 +13,12 @@ export class SliderComponent implements OnInit {
 
   show: boolean = true;
   value: number = 1;
-  options: Options = {
-    showTicksValues: true,
-    stepsArray: [
-      { value: 1, legend: "Home" },
-      { value: 2, legend: "My Work"},
-      { value: 3, legend: "About Me" },
-      { value: 4, legend: "Resume" },
-      { value: 5, legend: "Contact" },
-    ],
-  };
-  constructor(private route:Router) {}
+  options: any;
+  constructor(private route:Router, private deviceService: DeviceDetectorService) {}
 
   valuesToPaths = new Map<number, string>();
   pathsToValues = new Map<string, number>();
   home: boolean = true;
-  
 
   ngOnInit(): void {
     this.valuesToPaths.set(1, '/home')
@@ -51,6 +42,16 @@ export class SliderComponent implements OnInit {
         }
      }
     });
+    this.options = {
+      showTicksValues: this.deviceService.isDesktop(),
+      stepsArray: [
+        { value: 1, legend: "Home" },
+        { value: 2, legend: "My Work"},
+        { value: 3, legend: "About Me" },
+        { value: 4, legend: "Resume" },
+        { value: 5, legend: "Contact" },
+      ],
+    };
       
   }
 
