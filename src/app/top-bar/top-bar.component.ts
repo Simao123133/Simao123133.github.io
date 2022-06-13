@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
 import { AnimationEvent } from "@angular/animations";
 import { ViewEncapsulation } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import {
   trigger,
@@ -41,7 +43,7 @@ import {
 export class TopBarComponent implements OnInit {
 
 
-  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer) {
+  constructor(private matIconRegistry: MatIconRegistry, private domSanitizer: DomSanitizer, private http: HttpClient, readonly snackBar: MatSnackBar) {
     this.matIconRegistry.addSvgIcon(
       "github",
       this.domSanitizer.bypassSecurityTrustResourceUrl("assets/github.svg"));
@@ -51,18 +53,25 @@ export class TopBarComponent implements OnInit {
     
   }
 
-  numberOfLikes = 0;
-
   state = "open";
 
   toggle() {
     this.state = "closed";
-    this.numberOfLikes +=1;
-    localStorage.setItem('hearts', JSON.stringify(this.numberOfLikes));
+    this.http.get<any>("https://api.countapi.xyz/hit/simao.amaro.sh/visits").subscribe(data => {
+      this.openSnackbar("Thank you! Total: " + data.value);
+    });
   }
 
   ngOnInit(): void {
-    this.numberOfLikes = parseInt(localStorage.getItem('hearts') || '0');
+  }
+
+  openSnackbar(text: string){
+    this.snackBar.open(text, '', {
+      duration: 1000,
+      verticalPosition: 'top',
+      horizontalPosition: 'right',
+      panelClass: ['mat-toolbar', 'mat-primary', 'snackbar']
+    });
   }
 
   animEnd(event: AnimationEvent){
