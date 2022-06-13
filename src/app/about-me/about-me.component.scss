@@ -1,12 +1,3 @@
-img {
-    border-radius: 50%;
-    width: 60%;
-    margin-left: 10%;
-  }
-.column1 {
-    float: left;
-    width: 28%;
-    }
 .column3 {
     float: left;
     width: 33.33%;
@@ -14,12 +5,14 @@ img {
 .title{
     text-align:center;
 }
-.column2 {
-float: left;
-width: 50%;
-}
+
 .child{
     margin-top: 8vh;
+}
+
+.second-container{
+    margin:5vh;
+    display:inline-block
 }
   
   /* Clear floats after the columns */

@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Component({
   selector: 'app-about-me',
@@ -7,9 +8,12 @@ import { Component, OnInit, ElementRef } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  constructor(private elementRef:ElementRef) { }
+  constructor(private elementRef:ElementRef, private deviceService: DeviceDetectorService) { }
+
+  desktop: boolean = true;
 
   ngOnInit(): void {
+    this.desktop = this.deviceService.isDesktop();
   }
 
   ngAfterViewInit() {
