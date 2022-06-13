@@ -1,5 +1,5 @@
-<div>*ngIf="desktop; else elseBlock;"
-    <div class = "slider-class" [ngStyle]="{'opacity': show ? '100%' : '20%', 'color': home? 'white' : 'black', 'width': desktop? '20%' : '70%', 'left' : desktop? '40%' : '15%'}" text-align = "center">
+<div *ngIf="desktop; else elseBlock;">
+    <div class = "slider-class" [ngStyle]="{'opacity': show ? '100%' : '20%', 'color': home? 'white' : 'black', 'width': '20%', 'left' : '40%'}" text-align = "center">
         <ngx-slider [(value)]="value" [options]="options" (userChange)="onUserChange($event)" (mouseenter)="clearOpacity()" (mouseleave)="blurredOpacity()">
 
         </ngx-slider>
