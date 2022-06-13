@@ -14,7 +14,7 @@ export class SliderComponent implements OnInit {
   show: boolean = true;
   value: number = 1;
   options: any;
-  desktop: any;
+  desktop: boolean = true;
   constructor(private route:Router, private deviceService: DeviceDetectorService) {}
 
   valuesToPaths = new Map<number, string>();
