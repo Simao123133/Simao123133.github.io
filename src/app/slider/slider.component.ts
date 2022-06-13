@@ -11,7 +11,7 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 })
 export class SliderComponent implements OnInit {
 
-  show: boolean = true;
+  show: boolean = false;
   value: number = 1;
   options: any;
   desktop: boolean = true;
@@ -62,7 +62,9 @@ export class SliderComponent implements OnInit {
   }
 
   clearOpacity(){
-    this.show = true;
+    if (this.desktop){
+      this.show = true;
+    }
   }
 
   blurredOpacity(){
