@@ -70,7 +70,7 @@ export class TopBarComponent implements OnInit {
       duration: 1000,
       verticalPosition: 'top',
       horizontalPosition: 'right',
-      panelClass: ['mat-toolbar', 'mat-primary', 'snackbar']
+      panelClass: ['mat-toolbar', 'mat-primary']
     });
   }
 
