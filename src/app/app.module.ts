@@ -30,6 +30,7 @@ import { FormsModule } from '@angular/forms';
 import { MatCardModule} from '@angular/material/card';
 import { LightboxModule } from 'ngx-lightbox';
 import { AvatarModule } from 'ngx-avatar';
+import { RecaptchaModule, RecaptchaFormsModule,  RECAPTCHA_SETTINGS, RecaptchaSettings  } from "ng-recaptcha";
 
 @NgModule({
   declarations: [
@@ -65,8 +66,13 @@ import { AvatarModule } from 'ngx-avatar';
     MatCardModule,
     LightboxModule,
     AvatarModule,
+    RecaptchaFormsModule,
+    RecaptchaModule
   ],
-  providers: [],
+  providers: [{
+    provide: RECAPTCHA_SETTINGS,
+    useValue: { siteKey: "6Lc2y2kgAAAAAFkTKrzEyNAYTMCjFE65VEb_BjJr" } as RecaptchaSettings,
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -14,7 +14,8 @@ export class ContactComponent implements OnInit {
   formData = new FormGroup({
     user_email: new FormControl('', [Validators.required, Validators.email]),
     user_name: new FormControl('', [Validators.required]),
-    message: new FormControl('', [Validators.required])
+    message: new FormControl('', [Validators.required]),
+    recaptchaReactive: new FormControl(null, Validators.required)
   });
 
   constructor(private elementRef: ElementRef, readonly snackBar: MatSnackBar) { }
