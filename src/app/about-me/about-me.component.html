@@ -1,5 +1,5 @@
 <div class ="second-container">
-    <img src="assets/Me.jpg" alt="Avatar" style="float: left; ;border-radius: 50%;width:25vh;margin-right:2%;margin-left:2%;margin-bottom:3%">
+    <img src="assets/Me.jpg" alt="Avatar" style="float: left; ;border-radius: 50%;width:25vh;margin-right:2%;margin-left:2%;margin-bottom:1%">
     <h1 style="margin-top: 15vh;"> Hello there! I am Simão Amaro, a Software Engineer who loves to study different technologies and better ways to write cleaner code. 
         Currently my focus is <b>full-stack development</b>, but I also have an interest
         in devOps, artificial intelligence and machine learning.</h1>
@@ -7,7 +7,7 @@
 
 <div class ="second-container">
     <div class="row2">
-        <div class="column3">
+        <div [ngClass] = "desktop? 'column3' : 'col33'">
             <h1 class = "title"><b>Growing Up</b></h1>
             <ul>
                 <li> <h2>Been excellent student through whole studies,
@@ -15,7 +15,7 @@
                 <li> <h2>Played semi-professional soccer for 10 years in city's team Vianense</h2></li>
             </ul>
         </div>
-        <div class="column3">
+        <div [ngClass] = "desktop? 'column3' : 'col33'">
             <h1 class = "title"><b>Studies</b></h1>
             <ul>
                 <li><h2> Average of 19.13/20 in High School in Sciences</h2></li>
@@ -23,7 +23,7 @@
             </ul>
             
         </div>
-        <div class="column3">
+        <div [ngClass] = "desktop? 'column3' : 'col33'">
             <h1 class = "title"><b>Work</b></h1>
             <ul>
                 <li>
