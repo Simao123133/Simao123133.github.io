@@ -2,6 +2,7 @@ import { Component, OnInit, ElementRef} from '@angular/core';
 import {FormControl, Validators, FormGroup} from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
+import { FormGroupDirective } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -21,7 +22,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public sendEmail(e: Event) {
+  public sendEmail(e: Event, formDirective:FormGroupDirective) {
 
     if(this.formData.invalid){
       return
@@ -39,6 +40,9 @@ export class ContactComponent implements OnInit {
       verticalPosition: 'top',
       horizontalPosition: 'center',
     });
+
+    formDirective.resetForm();
+    this.formData.reset();
 
   }
 

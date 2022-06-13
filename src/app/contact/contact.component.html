@@ -1,4 +1,4 @@
-<form class="contact-form example-container" (submit)="sendEmail($event)" [formGroup]="formData">
+<form class="contact-form example-container" [formGroup]="formData" #formDirective="ngForm"  (submit)="sendEmail($event, formDirective)" >
     <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>
         <input matInput type="text" formControlName="user_name" required name = "user_name">
